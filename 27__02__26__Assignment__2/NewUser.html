@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New User Registration</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>User Registration Form</h2>
+
+    <form id="userForm">
+        Name: <input type="text" id="name"><br><br>
+        Email: <input type="email" id="email"><br><br>
+        Mobile: <input type="text" id="mobile"><br><br>
+        Address: <input type="text" id="address"><br><br>
+        <button type="button" onclick="displayData()">Register</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function displayData() {
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let mobile = document.getElementById("mobile").value;
+            let address = document.getElementById("address").value;
+
+            let table = `<table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Address</th>
+                    </tr>
+                    <tr>
+                        <td>${name}</td>
+                        <td>${email}</td>
+                        <td>${mobile}</td>
+                        <td>${address}</td>
+                    </tr>
+                </table>`;
+
+            document.getElementById("result").innerHTML = table;
+        }
+    </script>
+
+</body>
+</html>

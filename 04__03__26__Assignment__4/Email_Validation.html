@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+</head>
+<body>
+    <label for="email"></label>
+   Email:  <input type="email" id="email"/>
+
+   <button id="submit">Submit</button>
+
+
+
+    <script>
+        
+        let submit=document.getElementById("submit");
+        submit.addEventListener("click", function(){
+            let email=document.getElementById("email").value;
+            let i=email.indexOf("@");
+                let j=email.lastIndexOf(".");
+                if(i>0 && j>i){
+                    alert("valid email");
+                }
+                else{
+                    alert("invalid email");
+                }
+          
+        })
+
+    </script>
+</body>
+</html>

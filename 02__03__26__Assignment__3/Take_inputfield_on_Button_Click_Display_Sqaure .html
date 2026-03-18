@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Square of Number</title>
+</head>
+
+<body>
+
+    Enter Number:
+    <input type="number" id="num" required>
+
+    <button onclick="showSquare()">Show Square</button>
+
+    <p id="result"></p>
+
+    <script>
+
+        function showSquare() {
+            let n = document.getElementById("num").value;
+            let square = n * n;
+
+            document.getElementById("result").innerHTML = "Square is: " + square;
+        }
+
+    </script>
+
+</body>
+
+</html>

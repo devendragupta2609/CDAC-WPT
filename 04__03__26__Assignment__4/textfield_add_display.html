@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array Add and Display</title>
+</head>
+<body>
+
+Enter Value:
+<input type="text" id="value">
+
+<button onclick="addValue()">Add</button>
+<button onclick="displayArray()">Display</button>
+
+<ul id="list"></ul>
+
+<script>
+
+let arr=[];
+
+function addValue(){
+    let value=document.getElementById("value").value;
+    arr.push(value);
+    document.getElementById("value").value="";
+}
+
+function displayArray(){
+    let list=document.getElementById("list");
+    list.innerHTML="";
+
+    for(let i=0;i<arr.length;i++){
+        list.innerHTML+="<li>"+arr[i]+"</li>";
+    }
+}
+
+</script>
+
+</body>
+</html>

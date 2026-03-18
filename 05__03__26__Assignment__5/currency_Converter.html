@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency_converter</title>
+    <style>
+        div{
+            border: 2px solid black ;
+            background-color: rgb(217, 238, 30);
+            margin-top:150px;
+            margin-left: 200px;
+            height:300px;
+            width:500px;
+            border-radius: 25px;
+            padding: 50px;
+            
+
+        }
+        p{
+            border: 3px dashed black ;
+            color: rgb(32, 26, 26);
+            font-weight: bold;
+            font-size: 25px;
+            height: 50px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div style="border: 2px solid black" >
+    Amount: <input type="number" id="curr_in"/>
+    <br><br>
+    From: <select id="from">
+        <option>Euro</option>
+        <option>Rupees</option>
+        <option>Dollar</option>
+    </select>
+    To: <select id="to">
+        <option>Euro</option>
+        <option>Rupees</option>
+        <option>Dollar</option>
+    </select>
+    <button id="submit" onclick="Currency_converter()">Convert Currency</button>
+    <h3>Currency Converter: </h3>
+    <p id="display"></p>
+    </div>
+
+    <script>
+        function Currency_converter(){
+             var amount=document.getElementById("curr_in").value;
+        var from=document.getElementById("from").value;
+        var to=document.getElementById("to").value;
+        var result;
+
+        //Rupees to Euro
+        if(from=="Rupees" && to=="Euro"){
+            result=amount*0.0094;
+        }
+        //Rupees to Dollar
+         if(from=="Rupees" && to=="Dollar"){
+            result=amount*0.012;
+        }
+        //Rupees to Rupees 
+         if(from=="Rupees" && to=="Rupees"){
+            result=amount;
+        }
+        //Euro to Rupees
+        if(from=="Euro" && to=="Rupees"){
+            result=amount*106;
+        }
+        //Euro to Dollar
+         if(from=="Euro" && to=="Dollar"){
+            result=amount*1.16;
+        }
+        //Euro to Euro
+         if(from=="Euro" && to=="Euro"){
+            result=amount;
+        }
+        //Dollar to rupees
+         if(from=="Dollar" && to=="Rupees"){
+            result=amount*91;
+        }
+        //Dollar to Euro
+         if(from=="Dollar" && to=="Euro"){
+            result=amount*0.86;
+        }
+        //Dollar to Dollar
+         if(from=="Dollar" && to=="Dollar"){
+            result=amount;
+        }
+        document.getElementById("display").innerHTML=amount+" "+from+"     "+result+" "+to;
+
+        }
+       
+
+
+    </script>
+</body>
+</html>

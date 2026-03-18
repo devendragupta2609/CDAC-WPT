@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p class="para">Display  Color Input and Button on Html Page 
+On Button Click change paragraph font color 
+and font style should be bold </p>
+
+<p class="para">The sentences should all refer to the central idea, or thesis, of the paper </p>
+<p class="para">
+    Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length:
+<p class="para">
+    All of the sentences in a single paragraph should be related to a single controlling idea
+</p>
+
+<input type="color" id="col"/>
+<button onclick="change()">Change Color</button>
+
+<script>
+    function change(){
+        var col=document.getElementById("col").value;
+        var paragraph=document.getElementsByClassName("para");
+        for(var i=0;i<paragraph.length;i++){
+           paragraph[i].style.backgroundColor=col;
+           paragraph[i].style.fontWeight='bold';
+           
+        }
+        
+    }
+</script>
+</body>
+</html>

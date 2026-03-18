@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="textfield" placeholder="Enter something"/>
+    <input type="radio" id="radio1" name="case"/>
+    <label for="radio1">Uppercase</label>
+    <input type="radio" id="radio2" name="case"/>
+    <label for="radio2">LowerCase</label>
+    <input type="radio" id="radio3" name="case"/>
+    <label for="radio3">As_It_is</label>
+   
+    <button onclick="processText()">Submit</button>
+     <p id="radio_case"></p>
+    <script>
+        function processText(){
+             let text=document.getElementById("textfield").value;
+        let Radio_1=document.getElementById("radio1");
+        let Radio_2=document.getElementById("radio2");
+        let radio_3=document.getElementById("radio3");
+
+        if(Radio_1.checked){
+            text=text.toUpperCase();
+        }
+
+        else if(Radio_2.checked){
+            text=text.toLowerCase();
+        }
+
+        else if(radio_3.checked){
+            text=text;
+        }
+        document.getElementById("radio_case").innerHTML=text;
+
+        }
+       
+       
+
+
+    </script>
+
+
+</body>
+</html>
